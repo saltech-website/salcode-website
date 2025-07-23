@@ -167,7 +167,7 @@ const Portfolio: React.FC = () => {
                     key={index}
                     src={image} 
                     alt={`${selectedProjectData.title} ${index + 1}`}
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full max-h-[70vh] object-contain rounded-lg"
                   />
                 ))}
               </div>
