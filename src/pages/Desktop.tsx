@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckIcon, ComputerDesktopIcon, CogIcon, ShieldCheckIcon, RocketLaunchIcon, CommandLineIcon, ServerIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, ComputerDesktopIcon, CogIcon, ShieldCheckIcon, CommandLineIcon, ServerIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import FloatingBubbles from '../components/FloatingBubbles';
 
@@ -163,60 +163,6 @@ const Desktop: React.FC = () => {
       feature: 'Sigurnost podataka',
       desktop: 'Lokalna kontrola',
       web: 'Cloud zavisnost'
-    }
-  ];
-
-  const packages = [
-    {
-      name: 'Basic',
-      price: 'Od 2.500€',
-      description: 'Za jednostavne desktop aplikacije',
-      features: [
-        'Osnovna funkcionalnost',
-        'Jednostavan UI',
-        'Lokalna baza podataka',
-        'Windows podrška',
-        'Osnovni installer',
-        'Email podrška',
-        '3 meseca podrške',
-        'Osnovna dokumentacija'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: 'Od 5.000€',
-      description: 'Najpopularniji izbor za business aplikacije',
-      features: [
-        'Napredne funkcionalnosti',
-        'Custom UI/UX dizajn',
-        'Multi-platform (Win/Mac/Linux)',
-        'Mrežna baza podataka',
-        'Auto-update sistem',
-        'User management',
-        'Reporting funkcionalnosti',
-        '6 meseci podrške',
-        'Obuka korisnika'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Od 10.000€',
-      description: 'Za kompleksne enterprise aplikacije',
-      features: [
-        'Kompleksna arhitektura',
-        'Mikroservisi integracija',
-        'Advanced security',
-        'Multi-tenant podrška',
-        'API integracije',
-        'Custom plugin sistem',
-        'Advanced analytics',
-        '12 meseci podrške',
-        'Dedicated support',
-        'On-site obuka'
-      ],
-      popular: false
     }
   ];
 

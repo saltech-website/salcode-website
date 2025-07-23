@@ -17,13 +17,31 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    alert('Vaša poruka je uspešno poslata! Javićemo vam se uskoro.');
-    setFormData({ name: '', email: '', message: '' });
+
+    try {
+      const response = await fetch('http://localhost:8080/salcode-mailer/send-mail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert('Uspešno poslato!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Greška: ' + result.error);
+      }
+    } catch (error) {
+      alert('Došlo je do greške prilikom slanja.');
+      console.error(error);
+    }
   };
+
 
   return (
     <div className="pt-16">

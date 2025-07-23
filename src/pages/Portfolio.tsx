@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { EyeIcon, XMarkIcon, CheckIcon, StarIcon, CodeBracketIcon, DevicePhoneMobileIcon, ComputerDesktopIcon, GlobeAltIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline';
+import { EyeIcon, XMarkIcon, CheckIcon, StarIcon, CodeBracketIcon, DevicePhoneMobileIcon, ComputerDesktopIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import FloatingBubbles from '../components/FloatingBubbles';
 

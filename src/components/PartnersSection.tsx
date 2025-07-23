@@ -4,28 +4,23 @@ import { motion } from 'framer-motion';
 const PartnersSection: React.FC = () => {
   const partners = [
     {
-      name: 'Microsoft',
-      logo: 'https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=200&h=100'
+      name: 'Duvanska Industrija Coka doo',
+      logo: '/partners/partner1.png',
+      link: 'http://www.dic-coka.co.rs/'
     },
     {
-      name: 'Google',
-      logo: 'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=200&h=100'
+      name: 'Kripton doo',
+      logo: '/partners/partner4.png',
+      link: 'https://www.kripton.rs'
     },
     {
-      name: 'Amazon',
-      logo: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=200&h=100'
+      name: 'BUS Computers doo',
+      logo: '/partners/partner3.png',
+      link: 'https://bus.co.rs/'
     },
     {
-      name: 'Meta',
-      logo: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=200&h=100'
-    },
-    {
-      name: 'Apple',
-      logo: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=200&h=100'
-    },
-    {
-      name: 'Adobe',
-      logo: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=200&h=100'
+      name: 'Actuel',
+      logo: '/partners/partner2.png'
     }
   ];
 
@@ -46,7 +41,7 @@ const PartnersSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-8 items-center"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 items-center"
         >
           {partners.map((partner, index) => (
             <motion.div
@@ -56,11 +51,18 @@ const PartnersSection: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 grayscale hover:grayscale-0"
             >
-              <img 
-                src={partner.logo} 
-                alt={partner.name}
-                className="h-8 sm:h-12 w-auto object-contain"
-              />
+              <a
+                href={partner.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 grayscale hover:grayscale-0"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="h-8 sm:h-12 w-auto object-contain"
+                />
+              </a>
             </motion.div>
           ))}
         </motion.div>

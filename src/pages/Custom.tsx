@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckIcon, CodeBracketIcon, PaintBrushIcon, RocketLaunchIcon, CogIcon, ShieldCheckIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, CodeBracketIcon, PaintBrushIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import FloatingBubbles from '../components/FloatingBubbles';
 

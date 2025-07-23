@@ -9,9 +9,9 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Timeout refs for delayed closing
-  const webDropdownTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
-  const appDropdownTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
-  const companyDropdownTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const webDropdownTimeoutRef = React.useRef<number | null>(null);
+  const appDropdownTimeoutRef = React.useRef<number | null>(null);
+  const companyDropdownTimeoutRef = React.useRef<number | null>(null);
 
   const handleWebDropdownEnter = () => {
     if (webDropdownTimeoutRef.current) {

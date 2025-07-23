@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckIcon, DevicePhoneMobileIcon, GlobeAltIcon, ShieldCheckIcon, RocketLaunchIcon, UserGroupIcon, ChartBarIcon, BoltIcon, CameraIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, DevicePhoneMobileIcon, GlobeAltIcon, ShieldCheckIcon, UserGroupIcon, ChartBarIcon, BoltIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import FloatingBubbles from '../components/FloatingBubbles';
 
@@ -163,61 +163,6 @@ const Mobile: React.FC = () => {
       feature: 'UI/UX',
       native: 'Platform-specific',
       crossplatform: 'Konzistentan'
-    }
-  ];
-
-  const packages = [
-    {
-      name: 'MVP',
-      price: 'Od 4.000€',
-      description: 'Za startove i testiranje ideje',
-      features: [
-        'Osnovna funkcionalnost',
-        'Jednostavan UI dizajn',
-        'Cross-platform (React Native/Flutter)',
-        'Osnovna backend integracija',
-        'Push notifikacije',
-        'App store submission',
-        '3 meseca podrške',
-        'Osnovna analitika'
-      ],
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: 'Od 8.000€',
-      description: 'Najpopularniji izbor za biznise',
-      features: [
-        'Napredne funkcionalnosti',
-        'Custom UI/UX dizajn',
-        'Native ili cross-platform',
-        'Kompleksna backend integracija',
-        'User authentication',
-        'In-app purchases',
-        'Offline funkcionalnost',
-        '6 meseci podrške',
-        'Advanced analytics',
-        'Admin panel'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Od 15.000€',
-      description: 'Za velike organizacije',
-      features: [
-        'Kompleksne enterprise funkcionalnosti',
-        'Native development (iOS + Android)',
-        'Custom backend arhitektura',
-        'Enterprise security',
-        'API integracije',
-        'Multi-tenant arhitektura',
-        'Advanced reporting',
-        '12 meseci podrške',
-        'Dedicated support tim',
-        'White-label opcije'
-      ],
-      popular: false
     }
   ];
 

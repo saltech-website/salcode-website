@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckIcon } from '@heroicons/react/24/outline';
 import FloatingBubbles from '../components/FloatingBubbles';
 
 const Quote: React.FC = () => {
@@ -71,22 +70,41 @@ const Quote: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Quote form submitted:', formData);
-    alert('Vaš zahtev je uspešno poslat! Javićemo vam se u najkraćem roku sa detaljnom ponudom.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      projectType: '',
-      budget: '',
-      timeline: '',
-      description: '',
-      features: []
-    });
+
+    try {
+      const response = await fetch('http://localhost:8080/salcode-mailer/send-quote.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert('Zahtev uspešno poslat! Javićemo vam se uskoro.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          projectType: '',
+          budget: '',
+          timeline: '',
+          description: '',
+          features: []
+        });
+      } else {
+        alert('Greška: ' + result.error);
+      }
+    } catch (error) {
+      alert('Došlo je do greške prilikom slanja zahteva.');
+      console.error(error);
+    }
   };
+
 
   return (
     <div className="pt-16">

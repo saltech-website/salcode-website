@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckIcon, CogIcon, PaintBrushIcon, ShieldCheckIcon, RocketLaunchIcon, GlobeAltIcon, UserGroupIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, CogIcon, PaintBrushIcon, ShieldCheckIcon, GlobeAltIcon, UserGroupIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import FloatingBubbles from '../components/FloatingBubbles';
 
@@ -49,59 +49,6 @@ const WordPress: React.FC = () => {
       icon: <ChartBarIcon className="h-8 w-8" />,
       title: 'Skalabilnost',
       description: 'Od jednostavnog bloga do kompleksnog e-commerce sajta - WordPress raste sa vašim biznisom'
-    }
-  ];
-
-  const packages = [
-    {
-      name: 'Starter',
-      price: 'Od 800€',
-      description: 'Idealno za manje biznise i startove',
-      features: [
-        'Do 10 stranica',
-        'Osnovni prilagođeni dizajn',
-        'Kontakt forma',
-        'Osnovna SEO optimizacija',
-        'Mobilna responsivnost',
-        'SSL sertifikat',
-        '3 meseca besplatne podrške',
-        'Obuka za korišćenje'
-      ],
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: 'Od 1.500€',
-      description: 'Najpopularniji izbor za srednje biznise',
-      features: [
-        'Do 25 stranica',
-        'Potpuno prilagođeni dizajn',
-        'Blog sekcija sa kategorijama',
-        'Galerija slika i portfolio',
-        'Integrisani plugin-ovi',
-        'Osnovna e-commerce funkcionalnost',
-        'Napredna SEO optimizacija',
-        '6 meseci besplatne podrške',
-        'Google Analytics integracija'
-      ],
-      popular: true
-    },
-    {
-      name: 'Premium',
-      price: 'Od 2.500€',
-      description: 'Za velike biznise sa specifičnim potrebama',
-      features: [
-        'Neograničeno stranica',
-        'Potpuno custom dizajn i funkcionalnosti',
-        'Napredne e-commerce mogućnosti',
-        'Integrisane treće strane aplikacije',
-        'Multilingual podrška (WPML)',
-        'Custom plugin development',
-        'Napredne animacije i interakcije',
-        '12 meseci besplatne podrške',
-        'Prioritetna podrška 24/7'
-      ],
-      popular: false
     }
   ];
 

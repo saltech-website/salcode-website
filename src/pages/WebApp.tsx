@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckIcon, CodeBracketIcon, CloudIcon, DevicePhoneMobileIcon, CogIcon, ShieldCheckIcon, RocketLaunchIcon, GlobeAltIcon, UserGroupIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, CloudIcon, DevicePhoneMobileIcon, RocketLaunchIcon, GlobeAltIcon, UserGroupIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import FloatingBubbles from '../components/FloatingBubbles';
 
@@ -163,60 +163,6 @@ const WebApp: React.FC = () => {
       feature: 'Backup & sigurnost',
       webapp: 'Centralizovani backup',
       desktop: 'Lokalni backup potreban'
-    }
-  ];
-
-  const packages = [
-    {
-      name: 'Startup',
-      price: 'Od 3.000€',
-      description: 'Za manje biznise i startup projekte',
-      features: [
-        'Do 5 glavnih funkcionalnosti',
-        'Responzivni dizajn',
-        'Osnovna baza podataka',
-        'User authentication',
-        'Admin panel',
-        'Osnovna API integracija',
-        '3 meseca podrške',
-        'Hosting setup'
-      ],
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: 'Od 6.000€',
-      description: 'Najpopularniji izbor za srednje biznise',
-      features: [
-        'Do 15 glavnih funkcionalnosti',
-        'Napredni UI/UX dizajn',
-        'Kompleksna baza podataka',
-        'Role-based pristup',
-        'Napredni admin panel',
-        'Treće strane integracije',
-        'Real-time funkcionalnosti',
-        '6 meseci podrške',
-        'Performance optimizacija'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Od 12.000€',
-      description: 'Za velike organizacije sa kompleksnim potrebama',
-      features: [
-        'Neograničene funkcionalnosti',
-        'Custom arhitektura',
-        'Mikroservisi pristup',
-        'Advanced security',
-        'Multi-tenant arhitektura',
-        'Custom integracije',
-        'API development',
-        '12 meseci podrške',
-        'Dedicated support tim',
-        'Scalability planning'
-      ],
-      popular: false
     }
   ];
 

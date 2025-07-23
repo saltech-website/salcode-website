@@ -9,50 +9,61 @@ const Portfolio: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'Moderna e-commerce platforma sa potpunom funkcionalnosti',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+      title: 'Industrijska prodavnica - Kripton doo',
+      description: 'Sajt za prodaju lagera i industrijskih delova sa sistemom slanja upita',
+      image: '/projects/kripton-preview.png',
+      technologies: ['PHP', 'MySQL', 'Bootstrap', 'PHPMailer'],
       images: [
-        'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200'
-      ]
+        '/public/projects/kripton-1.png',
+        '/public/projects/kripton-2.png',
+        '/public/projects/kripton-3.png'
+      ],
+      website: 'https://www.kripton.rs/'
     },
     {
       id: 2,
-      title: 'Korporativni Web Sajt',
-      description: 'Responsivni korporativni sajt sa CMS sistemom',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['WordPress', 'PHP', 'MySQL', 'jQuery'],
+      title: 'BUS Computers – IT Rešenja i Oprema',
+      description: 'Sajt firme koja se bavi razvojem softvera, fiskalizacijom, prodajom računara i servisima. Prikazuje usluge, projekte i omogućava korisnicima lak kontakt i pregled ponude.',
+      image: '/projects/bus-preview.png',
+      technologies: [
+        'HTML', 
+        'CSS', 
+        'JavaScript', 
+        'PHP', 
+        'Bootstrap', 
+        'MySQL', 
+        'AJAX', 
+        'Font Awesome'
+      ],
       images: [
-        'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200'
-      ]
+        '/projects/bus-1.png',
+        '/projects/bus-2.png',
+        '/projects/bus-3.png'
+      ],
+      website: 'https://bus.co.rs'
     },
     {
       id: 3,
-      title: 'Mobile Banking App',
-      description: 'Sigurna mobilna aplikacija za bankarstvo',
-      image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React Native', 'Firebase', 'Redux', 'Biometric Auth'],
+      title: 'Duvanska industrija Čoka',
+      description: 'Sajt srpske firme sa višedecenijskom tradicijom u proizvodnji duvana, uz detaljne informacije o proizvodima i kontakt sekciju.',
+      image: '/projects/coka-preview.png',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Bootstrap', 'jQuery'],
       images: [
-        'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200'
+        '/projects/coka-1.png',
+        '/projects/coka-2.png',
+        '/projects/coka-3.png'
       ]
     },
     {
       id: 4,
-      title: 'Task Management System',
-      description: 'Kompletan sistem za upravljanje projektima i zadacima',
-      image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Vue.js', 'Laravel', 'WebSocket', 'Redis'],
+      title: 'ERP dodatak – Izveštavanje i AI asistent',
+      description: 'Desktop aplikacija za izveštavanje iz Firebird baze uz AI pomoć',
+      image: '/projects/erp-preview.png',
+      technologies: ['Python', 'Firebird', '.NET MAUI', 'OpenAI'],
       images: [
-        'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200'
+        '/projects/erp-1.png',
+        '/projects/erp-2.png',
+        '/projects/erp-3.png'
       ]
     }
   ];
@@ -93,7 +104,7 @@ const Portfolio: React.FC = () => {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-contain bg-white p-2"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <button
