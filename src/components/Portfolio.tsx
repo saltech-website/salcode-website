@@ -14,11 +14,10 @@ const Portfolio: React.FC = () => {
       image: '/projects/kripton-preview.png',
       technologies: ['PHP', 'MySQL', 'Bootstrap', 'PHPMailer'],
       images: [
-        '/public/projects/kripton-1.png',
-        '/public/projects/kripton-2.png',
-        '/public/projects/kripton-3.png'
+        '/projects/kripton-1.png',
+        '/projects/kripton-2.png',
+        '/projects/kripton-3.png'
       ],
-      website: 'https://www.kripton.rs/'
     },
     {
       id: 2,
@@ -40,7 +39,6 @@ const Portfolio: React.FC = () => {
         '/projects/bus-2.png',
         '/projects/bus-3.png'
       ],
-      website: 'https://bus.co.rs'
     },
     {
       id: 3,
